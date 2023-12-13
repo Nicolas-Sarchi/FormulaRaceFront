@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+    <div *ngFor="let field of model.fields">
+      <mat-form-field>
+        <mat-label>{{ field.name }}</mat-label>
+        <input matInput type="{{ field.type }}" formControlName="{{ field.name }}">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit">Guardar</button>
+</form>
+   

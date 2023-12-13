@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 16px;
+  }
+  
+  .card {
+    max-width: 400px;
+    margin: auto;
+  }
+  
