@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './teams.component.css'
 })
 export class TeamsComponent {
-  public teamModel = {
-    fields: [
-      { name: 'teamName', value: '' },
-      { name: 'location', value: '' },
-      
-    ]
-  };
+
 }

@@ -10,6 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule}  from "./material/material.module";
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProductTableComponent } from './product-table/product-table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryService } from './services/category.service';
 
 
 @NgModule({
@@ -19,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DriversComponent,
     TeamsComponent,
     FormComponent,
+    NavbarComponent,
+    ProductTableComponent,
     
   ],
   imports: [
@@ -26,9 +32,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CategoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,8 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DriverService {
-  private URL = "http://localhost:5084/driver";
+export class ProductService {
+
+  private URL = "http://localhost:5191/tienda/producto";
 
   constructor(private httpClient: HttpClient  ) { }
 

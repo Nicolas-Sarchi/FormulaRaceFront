@@ -1,10 +1,42 @@
-<form [formGroup]="form">
-    <div *ngFor="let field of model.fields">
-      <mat-form-field>
-        <mat-label>{{ field.name }}</mat-label>
-        <input matInput type="{{ field.type }}" formControlName="{{ field.name }}">
+<div class="example-container">
+  <form [formGroup]="options" (ngSubmit)="onSubmit()">
+    <div class="example-form-fields">
+      <!-- <mat-form-field
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="getFloatLabelValue()"
+      >
+        <input matInput placeh  older="Simple placeholder" required />
+      </mat-form-field> -->
+
+      <mat-form-field [floatLabel]="getFloatLabelValue()">
+        <mat-label>Nombre</mat-label>
+        <input matInput/>
       </mat-form-field>
+      <mat-form-field floatLabel="always">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matTextPrefix>$&nbsp;</span>
+      </mat-form-field>
+      <mat-form-field [floatLabel]="getFloatLabelValue()">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number"/>
+      </mat-form-field>
+      
+      <mat-form-field
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="getFloatLabelValue()"
+      >
+        <mat-select required>
+          <mat-option>-- None --</mat-option>
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{ category.nombre }}
+          </mat-option>
+        </mat-select>
+        <mat-label>Categoria</mat-label>
+      </mat-form-field>
+      <!-- <div class="button"> -->
+      <button mat-raised-button type="submit" color="primary">Guardar</button>
+      <!-- </div> -->
     </div>
-    <button mat-raised-button color="primary" type="submit">Guardar</button>
-</form>
-   
+  </form>
+</div>

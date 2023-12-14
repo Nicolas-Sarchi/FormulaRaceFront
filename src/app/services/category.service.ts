@@ -5,9 +5,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TeamService {
-
-  private URL = "http://localhost:5084/team";
+export class CategoryService {
+  private URL = "http://localhost:5191/Tienda/categoria";
 
   constructor(private httpClient: HttpClient  ) { }
 

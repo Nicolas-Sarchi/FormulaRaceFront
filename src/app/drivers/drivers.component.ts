@@ -7,11 +7,5 @@ import {FormComponent} from "../form/form.component";
   styleUrl: './drivers.component.css'
 })
 export class DriversComponent {
-  public driverModel = {
-    fields: [
-      { name: 'firstName', value: '' },
-      { name: 'lastName', value: '' },
-      
-    ]
-  };
+
 }
